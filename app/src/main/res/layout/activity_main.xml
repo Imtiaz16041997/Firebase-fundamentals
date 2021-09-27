@@ -4,29 +4,68 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:gravity="center_vertical"
     android:orientation="vertical"
     tools:context=".MainActivity">
+
+
 
 
     <EditText
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:layout_marginTop="100dp"
-        android:hint="you name"
+        android:layout_marginTop="8dp"
+        android:hint="Enter your id"
         android:layout_gravity="center_horizontal"
+        android:gravity="center"
         android:textSize="25sp"
         android:textColor="@color/black"
-        android:id="@+id/t1"
-        />
+        android:id="@+id/t1" />
+
+    <EditText
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:layout_margin="20dp"
+        android:hint="Enter your name"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center"
+        android:textSize="25sp"
+        android:textColor="@color/black"
+        android:id="@+id/t2" />
+
+    <EditText
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Enter your course"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center"
+        android:textSize="25sp"
+        android:textColor="@color/black"
+        android:id="@+id/t3" />
+
+    <EditText
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:layout_margin="20dp"
+        android:hint="Enter your duration"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center"
+        android:textSize="25sp"
+        android:textColor="@color/black"
+        android:id="@+id/t4" />
 
     <Button
         android:id="@+id/b1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         android:textSize="25sp"
-        android:textColor="@color/black"
-        android:text="Db to insert" />
+        android:text="Add to DB" />
+
+
 </LinearLayout>

@@ -13,7 +13,7 @@ import com.google.firebase.database.FirebaseDatabase;
 
 public class MainActivity extends AppCompatActivity {
 
-    EditText t1;
+    EditText t1,t2,t3,t4;
     Button b1;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,20 +21,39 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         t1 = findViewById(R.id.t1);
+        t2 = findViewById(R.id.t2);
+        t3 = findViewById(R.id.t3);
+        t4 = findViewById(R.id.t4);
         b1 = findViewById(R.id.b1);
+
+        FirebaseDatabase db = FirebaseDatabase.getInstance();
+
+        DatabaseReference root = db.getReference("students");
+
+
+
 
         b1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
+                String roll  = t1.getText().toString().trim();
+                String name  = t2.getText().toString().trim();
+                String course  = t3.getText().toString().trim();
+                String duration  = t4.getText().toString().trim();
 
-                FirebaseDatabase db = FirebaseDatabase.getInstance();
+                //create dataHolder object
+                dataHolder object = new dataHolder(name,course,duration);
 
-                DatabaseReference root = db.getReference("students");
-
-                root.setValue(t1.getText().toString());
+                root.child(roll).setValue(object);
                 t1.setText("");
-                Toast.makeText(getApplicationContext(),"Inserted",Toast.LENGTH_LONG).show();
+                t2.setText("");
+                t3.setText("");
+                t4.setText("");
+
+//                root.setValue(t1.getText().toString());
+//                t1.setText("");
+                Toast.makeText(getApplicationContext(),"Multiple Data Inserted",Toast.LENGTH_LONG).show();
             }
         });
     }
