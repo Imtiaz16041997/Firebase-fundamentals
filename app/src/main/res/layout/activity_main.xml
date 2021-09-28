@@ -4,68 +4,41 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center_vertical"
     android:orientation="vertical"
     tools:context=".MainActivity">
 
 
-
-
-    <EditText
+    <ImageView
+        android:id="@+id/imageView"
         android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:layout_marginTop="8dp"
-        android:hint="Enter your id"
-        android:layout_gravity="center_horizontal"
-        android:gravity="center"
-        android:textSize="25sp"
-        android:textColor="@color/black"
-        android:id="@+id/t1" />
+        android:layout_height="300dp"
+        android:layout_margin="30dp"
+        android:layout_gravity="center"
+        android:src="@drawable/ic_launcher_background" />
 
-    <EditText
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:layout_margin="20dp"
-        android:hint="Enter your name"
-        android:layout_gravity="center_horizontal"
-        android:gravity="center"
-        android:textSize="25sp"
-        android:textColor="@color/black"
-        android:id="@+id/t2" />
 
-    <EditText
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="Enter your course"
-        android:layout_gravity="center_horizontal"
-        android:gravity="center"
-        android:textSize="25sp"
-        android:textColor="@color/black"
-        android:id="@+id/t3" />
 
-    <EditText
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:layout_margin="20dp"
-        android:hint="Enter your duration"
-        android:layout_gravity="center_horizontal"
-        android:gravity="center"
-        android:textSize="25sp"
-        android:textColor="@color/black"
-        android:id="@+id/t4" />
+
 
     <Button
-        android:id="@+id/b1"
+        android:id="@+id/browse"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="10dp"
+        android:layout_margin="20dp"
+        android:text="BROWSE"
+        android:textSize="25sp" />
+
+    <Button
+        android:id="@+id/upload"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="20dp"
+        android:text="UPLOAD"
         android:textSize="25sp"
-        android:text="Add to DB" />
+
+        />
 
 
 </LinearLayout>
